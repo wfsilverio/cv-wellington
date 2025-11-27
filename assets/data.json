@@ -1,0 +1,152 @@
+{
+    "sobre": {
+        "nome": "Wellington de Faria Fernandes Silvério",
+        "titulo": "Front-end Developer · Angular · TypeScript · UX/UI",
+        "resumo": "Desenvolvedor Front-end com experiência em Angular, TypeScript, UX/UI e arquitetura de componentes reutilizáveis. Atuação em projetos complexos com integrações .NET, PHP e Oracle, sempre com foco em performance, usabilidade, consistência visual e trabalho em equipe com metodologias ágeis."
+    },
+    "contato": {
+        "whatsapp": "18 99199-0908",
+        "email": "wellingtonmcc@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/wellington-silverio-1705242a/",
+        "instagram": "https://instagram.com/wfsilverio",
+        "localizacao": "Penápolis – SP · Disponível para mudança para Curitiba-PR",
+        "foto": "https://media.licdn.com/dms/image/v2/D4D35AQFAHiaXBAfb-g/profile-framedphoto-shrink_100_100/B4DZq7mrU0GkAk-/0/1764084070319?e=1764856800&v=beta&t=iQa-OKwg-AiUJsxhgQDn0ieh4sw-ab4RNdFXAonIAM4"
+    },
+    "skills": [
+        "Angular",
+        "TypeScript",
+        "JavaScript",
+        "UX Design",
+        "UI Design",
+        "Figma",
+        "PHP",
+        "MySQL",
+        "Oracle",
+        "Linux",
+        "Git"
+    ],
+    "formacao": [
+        {
+            "titulo": "Web Design - 2007",
+            "descricao": "Microway Cursos Profissionalizantes"
+        },
+        {
+            "titulo": "Sistemas de Informação - 2008-2011",
+            "descricao": "FUNEPE - Fundação Educacional de Penápolis"
+        },
+        {
+            "titulo": "PHP 7.3 - 2018",
+            "descricao": "Udemy - Cursos Profissionalizantes"
+        },
+    ],
+    "idiomas": [
+        {
+            "idioma": "Português",
+            "nivel": "Nativo",
+            "porcentagem": 100,
+            "classe": "primary"
+        },
+        {
+            "idioma": "Inglês Técnico",
+            "nivel": "Leitura técnica e documentação",
+            "porcentagem": 70,
+            "classe": "secondary"
+        }
+    ],
+    "experiencia": [
+        {
+            "empresa": "Ahoy by Belago",
+            "periodo": "2022 – 2025 · Remoto / Híbrido",
+            "cargo": "Desenvolvedor Angular · Tech Lead Front-End",
+            "atividades": [
+                "Desenvolvimento de interfaces em Angular + Angular Material integradas a back-end .NET 6.",
+                "Definição de arquitetura front-end, criação de componentes reutilizáveis e padronização de interfaces.",
+                "Atuação como Tech Lead Front-End, conduzindo code review, boas práticas e suporte técnico ao time.",
+                "Vivência em Scrum: dailies, planning, refinement e sprint review com apresentação de resultados.",
+                "Uso de Figma para prototipação e Redmine para gestão de tarefas e sprints.",
+                "Levantamento de requisitos e acompanhamento de homologações junto ao cliente.",
+                "Sustentação de sistema legado em PHP 5.3 + Oracle, com tuning de queries, triggers e procedures."
+            ],
+            "badges": [
+                "PHP",
+                "Ágil",
+                "Scrum",
+                ".Net",
+                "SQL Server",
+                "Api",
+                "Rest",
+                "Angular",
+                "TypeScript",
+                "Figma",
+                "Oracle"
+            ]
+        },
+        {
+            "empresa": "Freelancer",
+            "periodo": "2010 – Atual",
+            "cargo": "Front-end / Full-Stack / UX/UI / E-commerce",
+            "atividades": [
+                "Desenvolvimento de sistemas com PHP e Angular, aplicando UX/UI em interfaces web.",
+                "Prototipação de telas no Figma (nível intermediário).",
+                "Projetos com WordPress, Tray, Nuvem Shop, Olist/Tiny e integrações de APIs.",
+                "Criação de sistema imobiliário para gestão de contratos de locação e financeiro."
+            ],
+            "badges": [
+                "PHP",
+                "Angular",
+                "UX/UI",
+                "E-commerce",
+                "ERP",
+                "Ubuntu",
+                "Linux",
+                "Apache"
+            ]
+        },
+        {
+            "empresa": "FUNEPE – Fundação Educacional de Penápolis",
+            "periodo": "2020 – 2024",
+            "cargo": "Coordenador de Sistemas",
+            "atividades": [
+                "Desenvolvimento em PHP, MySQL, jQuery, Ajax e integrações REST.",
+                "Administração de servidores Linux/Apache, virtual hosts e deploys via Git.",
+                "Criação de rotinas automáticas (crontab) e ajustes de performance.",
+                "Atuação-chave na migração para TOTVS Educacional, incluindo tratamento e migração de dados."
+            ],
+            "badges": [
+                "PHP",
+                "MySQL",
+                "Linux",
+                "Git",
+                "TOTVS"
+            ]
+        },
+        {
+            "empresa": "Colégio Franciscano Coração de Maria (AFASCOM)",
+            "periodo": "2013 – 2017",
+            "cargo": "Supervisor de TI",
+            "atividades": [
+                "Gestão da infraestrutura de TI, redes, servidores e controle de acesso.",
+                "Configuração de Mikrotik, backups e manutenção de ambiente operacional."
+            ],
+            "badges": [
+                "Infraestrutura",
+                "Mikrotik",
+                "Redes"
+            ]
+        },
+        {
+            "empresa": "Acrílicos Lemarc",
+            "periodo": "2008 – 2010",
+            "cargo": "Arte Finalista · Técnico de TI",
+            "atividades": [
+                "Criação de artes gráficas para corte a laser e serigrafia.",
+                "Suporte técnico, manutenção de máquinas e rede interna."
+            ],
+            "badges": [
+                "CorelDraw",
+                "Serigrafia",
+                "TI"
+            ]
+        }
+    ]
+}

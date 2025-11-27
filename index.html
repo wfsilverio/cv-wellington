@@ -4,460 +4,124 @@
 <head>
   <meta charset="UTF-8" />
   <title>CV – Wellington de Faria Fernandes Silvério</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    body {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /* fallback suave */
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-
-      padding: 24px;
-    }
-
-    .cv-wrapper {
-      max-width: 980px;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.92);
-      border-radius: 10px;
-      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.18);
-      padding: 32px;
-      display: grid;
-      grid-template-columns: 2fr 1.2fr;
-      gap: 32px;
-    }
-
-    @media (max-width: 800px) {
-      .cv-wrapper {
-        grid-template-columns: 1fr;
-        padding: 24px;
-      }
-    }
-
-    /* COLUNAS */
-    .left-col,
-    .right-col {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    /* TOPO – NOME E TÍTULO */
-    .header-name {
-      font-size: 26px;
-      font-weight: 700;
-      color: #222;
-    }
-
-    .header-role {
-      display: inline-block;
-      margin-top: 4px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: #f2f5ff;
-      color: #3145c4;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .summary {
-      margin-top: 10px;
-      font-size: 13px;
-      line-height: 1.5;
-      color: #444;
-    }
-
-    /* SEÇÕES */
-    .section-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: #333;
-      margin-top: 10px;
-      margin-bottom: 6px;
-    }
-
-    .job {
-      margin-bottom: 10px;
-    }
-
-    .job-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 8px;
-      font-size: 13px;
-      font-weight: 600;
-      color: #222;
-    }
-
-    .job-company {
-      font-weight: 600;
-    }
-
-    .job-period {
-      font-size: 11px;
-      color: #666;
-    }
-
-    .job-role {
-      font-size: 12px;
-      color: #666;
-      margin-bottom: 4px;
-    }
-
-    .job ul {
-      margin-left: 16px;
-      margin-top: 4px;
-      list-style: disc;
-    }
-
-    .job li {
-      font-size: 12px;
-      color: #444;
-      margin-bottom: 3px;
-    }
-
-    /* TAGS / BADGES */
-    .badge-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
-    }
-
-    .badge {
-      font-size: 11px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: #f3f4f6;
-      color: #333;
-      border: 1px solid #e5e7eb;
-    }
-
-    /* COLUNA DIREITA */
-    .avatar-wrapper {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 10px;
-    }
-
-    .avatar-circle {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 4px solid #ffffff;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-      background: linear-gradient(135deg, #ff9f68, #ff5470);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-weight: 700;
-      font-size: 22px;
-    }
-
-    .side-box {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 14px 16px;
-      box-shadow: 0 6px 15px rgba(15, 23, 42, 0.08);
-    }
-
-    .side-item {
-      font-size: 12px;
-      color: #444;
-      margin-bottom: 6px;
-    }
-
-    .side-label {
-      font-weight: 600;
-      color: #111827;
-    }
-
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 8px;
-    }
-
-    .skill-pill {
-      font-size: 11px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: #eef2ff;
-      color: #3730a3;
-    }
-
-    .language-bar {
-      margin-top: 8px;
-    }
-
-    .language-label {
-      font-size: 12px;
-      font-weight: 600;
-      color: #111827;
-      margin-bottom: 2px;
-    }
-
-    .bar-track {
-      width: 100%;
-      height: 7px;
-      border-radius: 999px;
-      background: #e5e7eb;
-      overflow: hidden;
-    }
-
-    .bar-fill {
-      height: 100%;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #22c55e, #16a34a);
-    }
-
-    .bar-fill.secondary {
-      background: linear-gradient(90deg, #f97316, #ea580c);
-    }
-
-    .language-percent {
-      font-size: 11px;
-      color: #6b7280;
-      margin-top: 2px;
-    }
-
-    .contact-link {
-      color: #2563eb;
-      text-decoration: none;
-      font-size: 12px;
-      word-break: break-all;
-    }
-
-    .contact-link:hover {
-      text-decoration: underline;
-    }
-
-    #bg-video {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      min-width: 100vw;
-      min-height: 100vh;
-      width: auto;
-      height: auto;
-      z-index: -10;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      filter: blur(2px) brightness(0.65);
-    }
-  </style>
+  <!-- Estilos externos -->
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
+
+  <!-- BACKGROUND VIDEO -->
   <video id="bg-video" autoplay muted loop playsinline>
-    <source src="video-2.mp4" type="video/mp4">
+    <source src="assets/video-2.mp4" type="video/mp4">
   </video>
 
-
+  <!-- WRAPPER PRINCIPAL -->
   <div class="cv-wrapper">
-    <!-- COLUNA ESQUERDA -->
-    <div class="left-col">
-      <div>
-        <div class="header-name">Wellington de Faria Fernandes Silvério</div>
-        <div class="header-role">Front-end Developer · Angular · TypeScript · UX/UI</div>
-        <p class="summary">
-          Desenvolvedor Front-end com experiência em Angular, TypeScript, UX/UI e arquitetura de componentes
-          reutilizáveis.
-          Atuação em projetos complexos com integrações .NET, PHP e Oracle, sempre com foco em performance, usabilidade,
-          consistência visual e trabalho em equipe com metodologias ágeis.
-        </p>
+
+    <!-- NAV MOBILE -->
+    <nav class="mb-3 d-lg-none">
+      <ul class="nav nav-pills nav-anchors">
+        <li class="nav-item"><a class="nav-link active" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experiencia">Experiência</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#formacao">Formação</a></li>
+        <li class="nav-item"><a class="nav-link" href="#idiomas">Idiomas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="row g-4">
+
+      <!-- COLUNA ESQUERDA -->
+      <div class="col-lg-4">
+
+        <!-- FOTO -->
+        <div class="text-center mb-3">
+          <img id="foto-perfil" class="avatar-circle" alt="Foto de Wellington" />
+        </div>
+
+        <!-- CONTATO -->
+        <div class="side-box" id="contato">
+          <div class="section-title">Contato</div>
+
+          <div class="side-item">
+            <span class="side-label">WhatsApp:</span>
+            <span id="contato-whatsapp"></span>
+          </div>
+
+          <div class="side-item">
+            <span class="side-label">E-mail:</span>
+            <a id="contato-email" class="contact-link"></a>
+          </div>
+
+          <div class="side-item">
+            <span class="side-label">LinkedIn:</span><br>
+            <a id="contato-linkedin" class="contact-link"></a>
+          </div>
+
+          <div class="side-item">
+            <span class="side-label">Instagram:</span><br>
+            <a id="contato-instagram" class="contact-link"></a>
+          </div>
+
+          <div class="side-item">
+            <span class="side-label">Localização:</span>
+            <span id="contato-localizacao"></span>
+          </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="side-box" id="skills">
+          <div class="section-title">Skills</div>
+          <div id="skills-list"></div>
+        </div>
+
+        <!-- FORMAÇÃO -->
+        <div class="side-box" id="formacao">
+          <div class="section-title">Formação</div>
+          <div id="formacao-box"></div>
+        </div>
+
+        <!-- IDIOMAS -->
+        <div class="side-box" id="idiomas">
+          <div class="section-title">Idiomas</div>
+          <div id="idiomas-box"></div>
+        </div>
+
       </div>
 
-      <!-- EXPERIÊNCIA -->
-      <div>
-        <div class="section-title">Experiência Profissional</div>
+      <!-- COLUNA DIREITA -->
+      <div class="col-lg-8">
 
-        <div class="job">
-          <div class="job-header">
-            <span class="job-company">Ahoy by Belago</span>
-            <span class="job-period">2022 – 2025 · Remoto / Híbrido</span>
-          </div>
-          <div class="job-role">Desenvolvedor Angular · Tech Lead Front-End</div>
-          <ul>
-            <li>Desenvolvimento de interfaces em <strong>Angular + Angular Material</strong> integradas a back-end em
-              <strong>.NET 6</strong>.
-            </li>
-            <li>Definição de arquitetura front-end, criação de componentes reutilizáveis e padronização de interfaces.
-            </li>
-            <li>Atuação como <strong>Tech Lead Front-End</strong>, conduzindo code review, boas práticas e suporte
-              técnico ao time.</li>
-            <li>Vivência em <strong>Scrum</strong>, participando de dailies, planning, refinement e sprint review com
-              apresentação de resultados.</li>
-            <li>Uso de <strong>Figma</strong> para análise/prototipação de telas e <strong>Redmine</strong> para gestão
-              de tarefas e sprints.</li>
-            <li>Levantamento de requisitos e acompanhamento de homologações junto ao cliente.</li>
-            <li>Sustentação de sistema legado em <strong>PHP 5.3 + Oracle</strong>, com otimização de queries, triggers
-              e procedures.</li>
-          </ul>
-          <div class="badge-list">
-            <span class="badge">Angular</span>
-            <span class="badge">TypeScript</span>
-            <span class="badge">Scrum</span>
-            <span class="badge">Figma</span>
-            <span class="badge">Oracle</span>
-          </div>
-        </div>
+        <!-- SOBRE -->
+        <section id="sobre" class="mb-4">
+          <div id="sobre-nome" class="header-name"></div>
+          <div id="sobre-titulo" class="header-role"></div>
+          <p id="sobre-resumo" class="summary"></p>
+        </section>
 
-        <div class="job">
-          <div class="job-header">
-            <span class="job-company">FUNEPE – Fundação Educacional de Penápolis</span>
-            <span class="job-period">2020 – 2024</span>
-          </div>
-          <div class="job-role">Coordenador de Sistemas</div>
-          <ul>
-            <li>Desenvolvimento em <strong>PHP</strong>, <strong>MySQL</strong>, jQuery, Ajax e integrações REST.</li>
-            <li>Administração de servidores Linux/Apache, virtual hosts e deploys via Git.</li>
-            <li>Criação de rotinas automáticas (crontab) e ajustes de performance.</li>
-            <li>Atuação-chave na migração para o <strong>TOTVS Educacional</strong>, incluindo tratamento e migração de
-              dados.</li>
-          </ul>
-        </div>
+        <!-- EXPERIÊNCIA -->
+        <section id="experiencia">
+          <div class="section-title">Experiência Profissional</div>
+          <div id="experiencia-box"></div>
+        </section>
 
-        <div class="job">
-          <div class="job-header">
-            <span class="job-company">Colégio Franciscano Coração de Maria (AFASCOM)</span>
-            <span class="job-period">2013 – 2017</span>
-          </div>
-          <div class="job-role">Supervisor de TI</div>
-          <ul>
-            <li>Gestão da infraestrutura de TI, redes, servidores e controle de acesso (catracas).</li>
-            <li>Configuração de Mikrotik, backups e manutenção do ambiente operacional.</li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <div class="job-header">
-            <span class="job-company">Acrílicos Lemarc</span>
-            <span class="job-period">2008 – 2010</span>
-          </div>
-          <div class="job-role">Arte Finalista · Técnico de TI</div>
-          <ul>
-            <li>Criação de artes gráficas para corte a laser e serigrafia.</li>
-            <li>Suporte técnico, manutenção de máquinas e rede interna.</li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <div class="job-header">
-            <span class="job-company">Freelancer</span>
-            <span class="job-period">2010 – Atual</span>
-          </div>
-          <div class="job-role">Front-end / Full-Stack / UX/UI / E-commerce</div>
-          <ul>
-            <li>Desenvolvimento de sistemas com PHP e Angular, aplicando UX/UI em interfaces web.</li>
-            <li>Prototipação de telas no <strong>Figma</strong> (nível intermediário).</li>
-            <li>Projetos com WordPress, Tray, Nuvem Shop, Olist/Tiny e integrações de APIs.</li>
-            <li>Criação de sistema imobiliário para gestão de contratos de locação e financeiro.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- COLUNA DIREITA -->
-    <div class="right-col">
-      <!-- FOTO / AVATAR -->
-      <div class="avatar-wrapper">
-        <!-- Substitua o conteúdo por uma <img> se quiser usar sua foto -->
-        <img
-          src="https://media.licdn.com/dms/image/v2/D4D35AQFAHiaXBAfb-g/profile-framedphoto-shrink_100_100/B4DZq7mrU0GkAk-/0/1764084070319?e=1764856800&v=beta&t=iQa-OKwg-AiUJsxhgQDn0ieh4sw-ab4RNdFXAonIAM4"
-          class="avatar-circle" alt="Foto de Wellington" />
-      </div>
-
-      <!-- CONTATO -->
-      <div class="side-box">
-        <div class="section-title">Contato</div>
-        <div class="side-item">
-          <span class="side-label">WhatsApp: </span>18 99199-0908
-        </div>
-        <div class="side-item">
-          <span class="side-label">E-mail: </span>
-          <a href="mailto:wellingtonmcc@gmail.com" class="contact-link">wellingtonmcc@gmail.com</a>
-        </div>
-        <div class="side-item">
-          <span class="side-label">LinkedIn: </span><br />
-          <a href="https://www.linkedin.com/in/wellington-silverio-1705242a/" class="contact-link">
-            linkedin.com/in/wellington-silverio-1705242a/
-          </a>
-        </div>
-        <div class="side-item">
-          <span class="side-label">Instagram: </span>
-          <a href="https://instagram.com/wfsilverio" class="contact-link">@wfsilverio</a>
-        </div>
-        <div class="side-item">
-          <span class="side-label">Localização: </span>Penápolis – SP · Disponível para mudança para Curitiba-PR
-        </div>
-      </div>
-
-      <!-- SKILLS -->
-      <div class="side-box">
-        <div class="section-title">Skills</div>
-        <div class="skills-list">
-          <span class="skill-pill">Angular</span>
-          <span class="skill-pill">TypeScript</span>
-          <span class="skill-pill">JavaScript</span>
-          <span class="skill-pill">UX Design</span>
-          <span class="skill-pill">UI Design</span>
-          <span class="skill-pill">Figma</span>
-          <span class="skill-pill">PHP</span>
-          <span class="skill-pill">MySQL</span>
-          <span class="skill-pill">Oracle</span>
-          <span class="skill-pill">Linux</span>
-          <span class="skill-pill">Git</span>
-        </div>
-      </div>
-
-      <!-- EDUCAÇÃO (EDITE SE QUISER) -->
-      <div class="side-box">
-        <div class="section-title">Formação</div>
-        <p class="side-item">
-          <span class="side-label">Formação em Tecnologia</span><br />
-          Cursos e especializações na área de Desenvolvimento Web, Front-end e Arquitetura de Sistemas.
-        </p>
-        <p class="side-item" style="font-size: 11px; color:#6b7280;">
-          *(Edite este campo com sua formação específica, faculdades e cursos que desejar destacar.)*
-        </p>
-      </div>
-
-      <!-- IDIOMAS -->
-      <div class="side-box">
-        <div class="section-title">Idiomas</div>
-
-        <div class="language-bar">
-          <div class="language-label">Português</div>
-          <div class="bar-track">
-            <div class="bar-fill" style="width: 100%;"></div>
-          </div>
-          <div class="language-percent">Nativo</div>
-        </div>
-
-        <div class="language-bar">
-          <div class="language-label">Inglês Técnico</div>
-          <div class="bar-track">
-            <div class="bar-fill secondary" style="width: 70%;"></div>
-          </div>
-          <div class="language-percent">Leitura técnica e documentação · ~70%</div>
-        </div>
       </div>
     </div>
   </div>
+
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <!-- SCRIPT EXTERNO -->
+  <script src="assets/script.js"></script>
+
 </body>
 
 </html>
