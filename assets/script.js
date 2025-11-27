@@ -131,6 +131,33 @@ function renderExperiencia(experiencias) {
   });
 }
 
+
+/* ----------------------------------------
+   BOTÃO DE COMPARTILHAR
+---------------------------------------- */
+document.getElementById("btn-share").addEventListener("click", async () => {
+  const shareData = {
+    title: "Currículo – Wellington Silvério",
+    text: "Confira meu currículo online:",
+    url: window.location.href
+  };
+
+  // Mobile e navegadores que suportam Web Share API
+  if (navigator.share) {
+    try {
+      await navigator.share(shareData);
+    } catch (err) {
+      console.log("Compartilhamento cancelado");
+    }
+    return;
+  }
+
+  // Fallback para desktop: copiar link
+  navigator.clipboard.writeText(window.location.href);
+  alert("Link copiado! Agora você pode compartilhar onde quiser.");
+});
+
+
 /* ---------------------------
    INICIALIZA
 ----------------------------*/
