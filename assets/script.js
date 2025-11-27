@@ -33,6 +33,8 @@ function renderContato(contato) {
   document.getElementById("contato-email").textContent = contato.email;
   document.getElementById("contato-email").href = "mailto:" + contato.email;
   document.getElementById("contato-linkedin").href = contato.linkedin;
+  document.getElementById("contato-linkedin").textContent = contato.linkedin;
+  document.getElementById("contato-instagram").textContent = contato.instagram;
   document.getElementById("contato-instagram").href = contato.instagram;
   document.getElementById("contato-localizacao").textContent = contato.localizacao;
 }
